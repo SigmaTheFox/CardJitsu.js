@@ -75,16 +75,15 @@ module.exports = {
 			p2_hand = p2.hand,
 			p1_bag = p1.bag,
 			p2_bag = p2.bag,
-			// Find the player's card index based on input and randomly generate the bot's
-			p1_idx = p1_hand.findIndex((i) => input == i.id),
+			// Randomly generate the bot's card index
 			p2_idx = Math.floor(Math.random() * p2.hand.length);
 
 		// If the player input an ID that does not correspond to any card, retur an error
-		if (p1_idx == -1)
-			return console.log(`\nYou don't have a card with ID ${input}\n`);
+		if (input < 0 || input > 4)
+			return console.log(`\nYou can only use numbers from 0 to 4\n`);
 
 		// Compare the cards to see who won the round
-		let winner = compareCards(p1_hand[p1_idx], p2_hand[p2_idx]);
+		let winner = compareCards(p1_hand[input], p2_hand[p2_idx]);
 
 		/*
 		In case of a tie delete the cards,
@@ -93,22 +92,22 @@ module.exports = {
 		in case of the winner being the Bot (Player 2) push it's card to the bag and remove both played cards
 		*/
 		if (winner === "tie") {
-			p1_hand.splice(p1_idx, 1);
+			p1_hand.splice(input, 1);
 			p2_hand.splice(p2_idx, 1);
 		};
 		if (winner === "p1") {
 			p1_bag.push({
-				color: p1_hand[p1_idx].color,
-				element: p1_hand[p1_idx].element,
+				color: p1_hand[input].color,
+				element: p1_hand[input].element,
 			});
-			p1_hand.splice(p1_idx, 1);
+			p1_hand.splice(input, 1);
 			p2_hand.splice(p2_idx, 1);
 		} else {
 			p2_bag.push({
 				color: p2_hand[p2_idx].color,
 				element: p2_hand[p2_idx].element,
 			});
-			p1_hand.splice(p1_idx, 1);
+			p1_hand.splice(input, 1);
 			p2_hand.splice(p2_idx, 1);
 		}
 	},

@@ -56,8 +56,10 @@ module.exports = {
 		alongside instructions on how to view either bag or quit the game
 		*/
 		let response = `You have:\n`;
+		let i = 0;
 		for (card of p_hand) {
-			response += `ID ${card.id}   | ${card.color} ${card.element} ${card.number}\n`;
+			response += `${i} | ${card.color} ${card.element} ${card.number}\n`;
+			i++;
 		}
 		response += "In your hand.\n\nb1, bag1 | View your bag\nb2, bag2 | View Player 2's bag\nq,  quit | Exit game\n";
 		console.log(response);
