@@ -20,9 +20,12 @@ There are two ways to win.
 - [ ] Add the actual game win condition
 
 ## How To Play
-To play this Javascript recreation you need [Node.js](https://nodejs.org) (preferably the latest as not even I am sure which features I used are supported in which version)<br/>
+You can play the game in two ways. With a packaged binary or from the source code itself.<br/>
 
-To actually play the game:
+To play using the binary, all you have to do is download the latest [release](https://github.com/SigmaTheFox/CardJitsu.js/releases/tag/releases) for your Operating System and run it.<br/>
+
+To play it from source code:
+- Download [Node.js](https://nodejs.org) (preferably the latest as not even I am sure which features I used are supported in which version)
 - Download the source code of this repo and extract all it's contents into a folder
 - Open a terminal in the folder containing `cardjitsu.js`
 - Type `node cardjitsu.js` and press `Enter`
