@@ -31,7 +31,7 @@ To play it from source code:
 - Type `node cardjitsu.js` and press `Enter`
 - Enjoy the game
 
-Keep in mind that at the moment the game goes on infinitely, meaning it's impossible to win. The game win condition is currently in the works and might be finished in a few days.
+Keep in mind that at the moment the game goes on infinitely, meaning it's impossible to win. The game win condition is currently in the works and will be finished soon™.
 
 ## Copyright
 I neither own Club Penguin, the original version of Card-Jitsu and nor do I own the name. All credit goes to **New Horizon Interactive**, **RocketSnail Games** and **Disney Interactive Studios** who were the original developers.
